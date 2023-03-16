@@ -1,12 +1,12 @@
-package main
+package utils
 
 import (
 	"fmt"
 	"strings"
 	"time"
 
-	jwtDto "github.com/navamongkolgreenmoons/meID-package/dto/jwt"
 	apiErrors "github.com/navamongkolgreenmoons/meID-package/dto/apiErrors"
+	jwtDto "github.com/navamongkolgreenmoons/meID-package/dto/jwt"
 
 	jwt "github.com/golang-jwt/jwt/v4"
 )

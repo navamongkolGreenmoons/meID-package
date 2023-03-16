@@ -1,10 +1,10 @@
-package main
+package utils
 
 import "fmt"
 
 var util *Util
 
-func main() {
+func utils() {
 
 	// setupJwt := SetupJwt("", "")
 	util = Init(nil)

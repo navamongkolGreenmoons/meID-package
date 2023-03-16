@@ -1,12 +1,10 @@
-package main
-
-import "fmt"
+package utils
 
 type Converter struct{}
 
 type Date struct{}
 
-type FileStorage struct{}
+type Decrypt struct{}
 
 type General struct{}
 
@@ -22,22 +20,18 @@ type Otp struct{}
 
 type Pagination struct{}
 
-type Redis struct{}
-
 type Util struct {
-	Converter   *Converter
-	Data        *Date
-	FileStorage *FileStorage
-	General     *General
-	Http        *Http
-	Jwt         *Jwt
-	Otp         *Otp
-	Pagination  *Pagination
-	Redis       *Redis
+	Converter  *Converter
+	Date       *Date
+	Decrypt    *Decrypt
+	General    *General
+	Http       *Http
+	Jwt        *Jwt
+	Otp        *Otp
+	Pagination *Pagination
 }
 
 func SetupJwt(hmacTokenSecret, hmacRefreshSecret string) *Jwt {
-	fmt.Println("Setting up JWT")
 	return &Jwt{
 		hmacTokenSecret:   []byte(hmacTokenSecret),
 		hmacRefreshSecret: []byte(hmacRefreshSecret),
@@ -45,7 +39,6 @@ func SetupJwt(hmacTokenSecret, hmacRefreshSecret string) *Jwt {
 }
 
 func Init(jwt *Jwt) *Util {
-	fmt.Println("Setting up Utils")
 	return &Util{
 		Jwt: jwt,
 	}
