@@ -1,12 +1,10 @@
-package utils
+package meUtils
 
 type Converter struct{}
 
 type Date struct{}
 
 type Decrypt struct{}
-
-type General struct{}
 
 type Http struct{}
 
@@ -20,15 +18,17 @@ type Otp struct{}
 
 type Pagination struct{}
 
-type Util struct {
+type String struct{}
+
+type MeUtil struct {
 	Converter  *Converter
 	Date       *Date
 	Decrypt    *Decrypt
-	General    *General
 	Http       *Http
 	Jwt        *Jwt
 	Otp        *Otp
 	Pagination *Pagination
+	String     *String
 }
 
 func SetupJwt(hmacTokenSecret, hmacRefreshSecret string) *Jwt {
@@ -38,8 +38,8 @@ func SetupJwt(hmacTokenSecret, hmacRefreshSecret string) *Jwt {
 	}
 }
 
-func Init(jwt *Jwt) *Util {
-	return &Util{
+func Init(jwt *Jwt) *MeUtil {
+	return &MeUtil{
 		Jwt: jwt,
 	}
 }

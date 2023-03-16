@@ -1,4 +1,4 @@
-package utils
+package meUtils
 
 import (
 	"encoding/base64"
